@@ -1,0 +1,51 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+/* Scrollbars: track hidden until user scrolls; thumb fades after idle */
+.scrollbar-smart {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+.scrollbar-smart.scrollbar-smart--active {
+  scrollbar-color: rgba(255, 255, 255, 0.22) transparent;
+}
+.scrollbar-smart::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.scrollbar-smart::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-smart::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 999px;
+  transition: background-color 0.2s ease;
+}
+.scrollbar-smart.scrollbar-smart--active::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.22);
+}
+
+/* Horizontal strips: keep gutters scrollbar-free */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Leaflet map tiles inside constrained containers */
+.leaflet-container {
+  background: #0d1117 !important;
+}
+.leaflet-tile-pane {
+  opacity: 1;
+}
+/* Hide default attribution */
+.leaflet-control-attribution {
+  display: none !important;
+}
+.leaflet-control-zoom {
+  display: none !important;
+}
